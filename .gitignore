@@ -2,6 +2,8 @@
 node_modules/
 .idea/
 .vscode/
+package.json
+yarn.lock
 
 # environment
 settings.json
