@@ -30,44 +30,44 @@ describe("Vending Machine", () => {
   describe("when user input order without extra amount of money", () => {
     test("should return product and the amount of change", () => {
       expect(vendingMachine.order("B3", 3.5)).toMatch(
-        "Ruffles BBQ and 1 loonie, 2 dimes, "
+        "Ruffles BBQ and for change 1 loonie and 2 dimes."
       );
     });
   });
-  //   describe("", () => {});
-  //   describe("", () => {});
-  //   describe("", () => {});
-  //   describe("", () => {});
-  //   describe("", () => {});
-  //   describe("", () => {});
-  //   describe("", () => {});
+  describe("when user input order without extra amount of money", () => {
+    test("should return product and the amount of change", () => {
+      expect(vendingMachine.order("C2", 6.5)).toMatch(
+        "Lays Bacon and for change 1 toonie, 1 loonie, 1 50-cent, 1 quarter, 1 dime,  and 1 nickel."
+      );
+    });
+  });
 });
 
-// describe("Vending Machine without product", () => {
-//   beforeEach(() => {
-//     newInventory = inventory;
-//     //for id = "A1"
-//     newInventory.items[0].current = 0;
-//     //for id ="B1"
-//     newInventory.items[4].current = 0;
-//     vendingMachine = new VendingMachine(newInventory);
-//   });
+describe("Vending Machine without product", () => {
+  beforeEach(() => {
+    newInventory = inventory;
+    //for id = "A1"
+    newInventory.items[0].current = 0;
+    //for id ="B1"
+    newInventory.items[4].current = 0;
+    vendingMachine = new VendingMachine(newInventory);
+  });
 
-//   describe("When user input order and there is no product left", () => {
-//     it("should return No product available, and return money", () => {
-//       expect(() => vendingMachine.order("A1", 2.0)).toThrowError(
-//         "Doritos Nachos is not available, get your 2.0 dolars back"
-//       );
-//     });
-//   });
-//   describe("When user input order and there is no product left", () => {
-//     it("should return No product available, and return money", () => {
-//       expect(() => vendingMachine.order("B1", 3.0)).toThrowError(
-//         "Ruffles Regular is not available, get your 3.0 dolars back"
-//       );
-//     });
-//   });
-// });
+  describe("When user input order and there is no product left", () => {
+    it("should return No product available, and return money", () => {
+      expect(vendingMachine.order("A1", 2.0)).toMatch(
+        "Doritos Nachos is not available, get your 2.00 dolars back"
+      );
+    });
+  });
+  describe("When user input order and there is no product left", () => {
+    it("should return No product available, and return money", () => {
+      expect(vendingMachine.order("B1", 3.0)).toMatch(
+        "Ruffles Regular is not available, get your 3.00 dolars back"
+      );
+    });
+  });
+});
 
 // describe("Vending Machine without coins", () => {
 //   beforeEach(() => {
@@ -95,18 +95,28 @@ describe("Vending Machine", () => {
 //   });
 // });
 
-// describe("Refill Vending Machine", () => {
-//   inventoryEmpty = inventory;
-//   inventoryEmpty.items[2].current = 0;
-//   inventoryEmpty.items[3].current = 0;
-//   inventoryEmpty.items[7].current = 0;
+describe("Refill Vending Machine", () => {
+  inventoryEmpty = inventory;
+  inventoryEmpty.items[2].current = 0;
+  inventoryEmpty.items[3].current = 0;
+  inventoryEmpty.items[7].current = 0;
 
+  describe("When user called this function ", () => {
+    it("should refill the vending machine with products", () => {
+      expect(vendingMachine.refilInventory(inventoryEmpty)).toBe(inventory);
+    });
+  });
+});
+
+// describe("Print Vending Machine Inventory", () => {
+//   printInventory = console.log(inventory);
 //   describe("When user called this function ", () => {
-//     it("should refill the vending machine with products", () => {
-//       expect(vendingMachine.refilInventory(inventoryEmpty)).toBe(inventory);
+//     it("should return the machine inventory", () => {
+//       expect(vendingMachine.printInventory()).toMatch(printInventory);
 //     });
 //   });
 // });
+
 // describe("Refill Vending Machine", () => {
 //   inventoryEmpty = inventory;
 //   inventoryEmpty.coins[1].current = 0;
