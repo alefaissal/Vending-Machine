@@ -1,6 +1,5 @@
 {
-  "items": [
-    {
+  "items": [{
       "id": "A1",
       "name": "Doritos Nachos",
       "price": 1.3,
@@ -97,12 +96,12 @@
       "current": 6
     }
   ],
-  "coins": [
-    {
+  "coins": [{
       "id": 5,
       "name": "nickel",
       "value": 0.05,
       "max": 1000,
+      "need": 500,
       "min": 200,
       "current": 500
     },
@@ -111,6 +110,7 @@
       "name": "dime",
       "value": 0.1,
       "max": 1000,
+      "need": 500,
       "min": 200,
       "current": 500
     },
@@ -119,6 +119,7 @@
       "name": "quarter",
       "value": 0.25,
       "max": 500,
+      "need": 300,
       "min": 100,
       "current": 300
     },
@@ -127,6 +128,7 @@
       "name": "50-cent piece",
       "value": 0.5,
       "max": 200,
+      "need": 100,
       "min": 30,
       "current": 100
     },
@@ -135,6 +137,7 @@
       "name": "loonie",
       "value": 1.0,
       "max": 1000,
+      "need": 50,
       "min": 50,
       "current": 50
     },
@@ -143,6 +146,7 @@
       "name": "toonie",
       "value": 2.0,
       "max": 1000,
+      "need": 5,
       "min": 5,
       "current": 5
     }
