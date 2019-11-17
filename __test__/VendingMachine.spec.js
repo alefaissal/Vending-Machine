@@ -27,6 +27,13 @@ describe("Vending Machine", () => {
       );
     });
   });
+  describe("when user input order without correct amount of money", () => {
+    test("should return error message asking for amount of money missing", () => {
+      expect(() => vendingMachine.order("C4", 2.15)).toThrowError(
+        "Still missing 0.5 dollars for your Lays Ketchup"
+      );
+    });
+  });
   describe("when user input order without extra amount of money", () => {
     test("should return product and the amount of change", () => {
       expect(vendingMachine.order("B3", 3.5)).toMatch(
@@ -94,25 +101,3 @@ describe("Refill coins Vending Machine", () => {
     });
   });
 });
-
-// describe("Print Vending Machine Inventory", () => {
-//   printInventory = console.log(inventory);
-//   describe("When user called this function ", () => {
-//     it("should return the machine inventory", () => {
-//       expect(vendingMachine.printInventory()).toMatch(printInventory);
-//     });
-//   });
-// });
-
-// describe("Refill Vending Machine", () => {
-//   inventoryEmpty = inventory;
-//   inventoryEmpty.coins[1].current = 0;
-//   inventoryEmpty.coins[3].current = 0;
-//   inventoryEmpty.coins[5].current = 0;
-
-//   describe("When user called this function ", () => {
-//     it("should refill the vending machine with coins", () => {
-//       expect(vendingMachine.refilCoins(inventoryEmpty)).toBe(inventory);
-//     });
-//   });
-// });
