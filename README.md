@@ -30,6 +30,17 @@ Download the project, save it in your computer and open the VendingMachine folde
 $ npm init
 ```
 
+### Or
+
+```console
+$ yarn init
+```
+
+### Case you `don't have` neither npm or yarn check the website bellow:
+
+https://www.npmjs.com/get-npm
+https://yarnpkg.com/lang/en/docs/install/#mac-stable
+
 ## To run the tests
 
 In the project directory, you can run:>
