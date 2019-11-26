@@ -1,7 +1,7 @@
 # Vending Machine
 
-Is a javascript project to simulate a vending machine that only accepts coins as payments and return as a string a result for the inputs.
-Depending on the amount of money, the product and its price.
+Is a Javascript project to simulate a vending machine that only accepts coins as payments and return a string as result for the inputs.
+Depending on the amount of money, the product required and its price.
 
 In this project a Test Driven Development (TDD) approach was used.
 
@@ -22,7 +22,13 @@ In this project a Test Driven Development (TDD) approach was used.
 
 ## Installation Instructions
 
-Just download the project, save it in your computer and open the VendingMachine folder in terminal.
+Download the project, save it in your computer and open the VendingMachine folder in terminal.
+
+## To complete instalation run
+
+```console
+$ npm init
+```
 
 ## To run the tests
 
