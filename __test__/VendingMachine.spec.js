@@ -34,7 +34,7 @@ describe("Vending Machine", () => {
       );
     });
   });
-  describe("when user input order without extra amount of money", () => {
+  describe("when user input order with extra amount of money", () => {
     test("should return product and the amount of change", () => {
       expect(vendingMachine.order("B3", 3.5)).toMatch(
         "Ruffles BBQ and for change 1 loonie and 2 dimes."
